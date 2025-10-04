@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Expense Management</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1173d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<div class="flex h-full grow">
+<aside class="flex flex-col w-64 bg-background-light dark:bg-background-dark p-4 border-r border-primary/20 dark:border-primary/30">
+<div class="flex items-center gap-3 p-2 mb-6">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBN60YbVxhxNgeZR4XIGOpYPw11OaI4HV0iquYtVkSB4tfXeHC9iG6oL317A3Pn2pLJ_lD26h5xdnNXir8L7SDCEkPyeDBMYI_SRQP9rMifOktEzGFuv1MHSAiVW8nNV2L-9FG5QqlIaYnrP9mwww6Yo2v9JG8gDF1Q9Uhogsqo8RBG6jNVtXIkp0QivGCP9j6QkjH-IrCt4Pfi32NKVRp7iQ7VeMf1lxUGs83mr3V1Cm_xJcxLFrXNvFBMPqHuHaaEcdocWJP2YP4");'></div>
+<h1 class="text-background-dark dark:text-background-light text-base font-medium">Emily Carter</h1>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded text-background-dark dark:text-background-light hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-background-dark dark:text-background-light hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<p class="text-sm font-medium">Expenses</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-background-dark dark:text-background-light hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">assessment</span>
+<p class="text-sm font-medium">Reports</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-background-dark dark:text-background-light hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">policy</span>
+<p class="text-sm font-medium">Policies</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 dark:bg-primary/30 text-primary" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</a>
+</nav>
+</aside>
+<main class="flex-1 p-8">
+<div class="flex items-center justify-between mb-8">
+<h1 class="text-3xl font-bold text-background-dark dark:text-background-light">Settings</h1>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="lg:col-span-1 bg-white dark:bg-background-dark rounded-xl p-6 shadow-sm border border-primary/20">
+<h2 class="text-xl font-bold text-background-dark dark:text-background-light mb-6">Preferences</h2>
+<form class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-background-dark dark:text-background-light pb-2">Default Currency</label>
+<select class="form-select w-full rounded-lg border-primary/30 bg-background-light dark:bg-primary/10 text-background-dark dark:text-background-light focus:ring-primary focus:border-primary">
+<option>USD - United States Dollar</option>
+<option>EUR - Euro</option>
+<option>GBP - British Pound</option>
+<option>JPY - Japanese Yen</option>
+<option>CAD - Canadian Dollar</option>
+</select>
+</div>
+<div class="pt-2">
+<button class="w-full flex justify-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="submit">
+                    Save Preferences
+                  </button>
+</div>
+</form>
+</div>
+<div class="lg:col-span-1 bg-white dark:bg-background-dark rounded-xl p-6 shadow-sm border border-primary/20">
+<h2 class="text-xl font-bold text-background-dark dark:text-background-light mb-6">Security</h2>
+<form class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-background-dark dark:text-background-light pb-2">Current Password</label>
+<input class="form-input w-full rounded-lg border-primary/30 bg-background-light dark:bg-primary/10 text-background-dark dark:text-background-light placeholder-primary/50 focus:ring-primary focus:border-primary" placeholder="Enter your current password" type="password"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-background-dark dark:text-background-light pb-2">New Password</label>
+<input class="form-input w-full rounded-lg border-primary/30 bg-background-light dark:bg-primary/10 text-background-dark dark:text-background-light placeholder-primary/50 focus:ring-primary focus:border-primary" placeholder="Enter a new password" type="password"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-background-dark dark:text-background-light pb-2">Confirm New Password</label>
+<input class="form-input w-full rounded-lg border-primary/30 bg-background-light dark:bg-primary/10 text-background-dark dark:text-background-light placeholder-primary/50 focus:ring-primary focus:border-primary" placeholder="Confirm your new password" type="password"/>
+</div>
+<div class="pt-2">
+<button class="w-full flex justify-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="submit">
+                    Update Password
+                  </button>
+</div>
+</form>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
